@@ -60,3 +60,6 @@ desktop.ini
 # 🗂️ Past Code and Logs
 past/
 logs/
+
+# Specific to this project
+games
