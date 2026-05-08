@@ -1,0 +1,31 @@
+# COAST config for ScummVM games via vLLM (Qwen2-VL)
+# Run from game_agent/coast/:
+#   python scummvm_coast_agent.py --game kq4
+#   python scummvm_coast_agent.py --game kq4 --base-url http://localhost:8000/v1 --model Qwen/Qwen2-VL-7B-Instruct
+
+RESET_ON_SUCCESS: true
+max_action_count: 50
+
+# Prompt paths (same as default COAST)
+action_prompt_path: "./json/action_prompt.json"
+game_prompt_path: "./json/game_prompt.json"
+
+# Model — OpenAI-compatible vLLM endpoint (Snellius)
+# SSH tunnel: ssh -L 8000:localhost:8000 <user>@snellius.surf.nl
+reasoning_model: "Qwen/Qwen2-VL-7B-Instruct"
+gui_model: "scummvm"
+game_name: "kq4"
+scummvm_base_url: "http://localhost:8000/v1"
+scummvm_api_key: "dummy"
+
+# Grounding resolution
+grounding_width: 720
+grounding_height: 450
+
+# COAST loop settings
+max_steps: 50
+timeout: 3600
+
+### Per-bot step limits
+max_actions_seeker: 5
+max_actions_solver: 5

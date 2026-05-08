@@ -31,6 +31,15 @@ def execute_action(action_prompt, system_prompt=None, encoded_image=None, gui_mo
             user_prompt=action_prompt,
             encoded_image=encoded_image
         ))
+
+    elif gui_model == "scummvm":
+        from gui_agent.scummvm import execute_scummvm_action
+        return execute_scummvm_action(
+            action_prompt=action_prompt,
+            encoded_image=encoded_image,
+            reasoning_model=reasoning_model,
+        )
+
     else:
         print(f"[ERROR] Unknown gui_model: {gui_model}")
         return 0
