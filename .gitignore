@@ -62,4 +62,10 @@ past/
 logs/
 
 # Specific to this project
-games
+games/
+runs/
+agent_log/
+memory/
+*log*
+*debug*
+screenshots/
