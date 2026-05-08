@@ -61,6 +61,11 @@ desktop.ini
 past/
 logs/
 
+# 🔑 Secrets / Env files
+.env
+*.env
+**/.env
+
 # Specific to this project
 games/
 runs/
